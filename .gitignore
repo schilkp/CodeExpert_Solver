@@ -130,3 +130,9 @@ dmypy.json
 
 # PyCharms
 .idea/
+
+# Ignore Generated Cpp Files
+CheatyCode.cpp
+
+# Ignore Testing files prefixed with '_'
+_*
