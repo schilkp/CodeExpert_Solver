@@ -54,6 +54,8 @@ cpp_code = cpp_code.replace("$INPUTS$", inputs_array)
 cpp_code = cpp_code.replace("$OUTPUTS$", outputs_array)
 cpp_code = cpp_code.replace("$COUNT$", str(count))
 
+print("Found "+str(count)+" responses.")
+
 # Remove warning:
 cpp_code = cpp_code.replace("#### THIS TEMPLATE WILL NOT COMPILE UNTIL POPULATED BY ETHCodeExpert_Solver.py ! ####\n",'')
 
