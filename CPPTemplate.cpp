@@ -2,7 +2,7 @@
 /*
  * Automatically Generated CodeExpert Solution
  * Script by Philipp Schilk, 2020
- * https://github.com/TheSchilk/ETHCodeExpert_Solver
+ * https://github.com/TheSchilk/CodeExpert_Solver
  *
  * Are you really going to submit this?
  * I wrote this as a fun programming challenge.

@@ -1,8 +1,8 @@
-# ETHCodeExpert_Solver
+# CodeExpert_Solver
 
 (c) Philipp Schilk, 2020
 
-https://github.com/TheSchilk/ETHCodeExpert_Solver/
+https://github.com/TheSchilk/CodeExpert_Solver/
 
 ***"Because the most important thing is a good come-back"***
 
@@ -23,6 +23,8 @@ I really hope the following is unnecessary, but on the off-chance it is not obvi
 I don't encourage cheating, and this is not meant to actually complete your homework.
 This is a tongue-in-cheek programming project, and while it's results will most likely
 pass the auto-grader, they will not be accepted upon actual review. 
+
+*Not associated with ETH or Code Expert*
 
 # Requirements and Installation
 
@@ -50,7 +52,7 @@ and save the text file into the same directory as this script.
 ### 2: Run ETHCodeExpert_Solver
 
 ```console
-~$ python ETHCodeExpert_Solver grader.txt
+~$ python CodeExpert_Solver grader.txt
 ```
 
 where grader.txt is whatever you called the text file.
