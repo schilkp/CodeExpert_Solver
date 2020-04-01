@@ -11,6 +11,10 @@ try:
 except FileNotFoundError:
     print("CPPTemplate.cpp not found, make sure it is in the same/working directory!")
     exit()
+    
+if len(sys.argv) < 2:
+    print("Please specify file containing grader report!")
+    exit()
 
 # Step 1: Open file, read in contents into string
 grader_output = ""
