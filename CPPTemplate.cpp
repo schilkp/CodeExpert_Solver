@@ -11,22 +11,20 @@
  */
 
 #include <iostream>
-#include <string.h>
-using namespace std;
 
 int case_count = $COUNT$;
 
-string input_pattern[] = {
+std::string input_pattern[] = {
 $INPUTS$
 };
 
-string output[] = {
+std::string output[] = {
 $OUTPUTS$
 };
 
 int main(){
   //Get input
-  string input;
+  std::string input;
   getline(cin, input);
   
   //Lookup and output
