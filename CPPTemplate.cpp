@@ -11,6 +11,7 @@
  */
 
 #include <iostream>
+#include <algorithm>
 
 int case_count = $COUNT$;
 
@@ -24,9 +25,20 @@ $OUTPUTS$
 
 int main(){
   //Get input
-  std::string input;
-  getline(cin, input);
+  std::string input = "";
+  std::cin >> std::noskipws;
+
+  char inchar;
+  while(std::cin >> inchar){
+    input += inchar;
+  }
   
+	//We always end up with a trailing newline, get rid of that.
+  input.pop_back();
+  
+  //Replace all newlines within string with spaces
+  replace(input.begin(), input.end(), '\n', ' ');
+	
   //Lookup and output
   for(int i = 0; i < case_count; i++){
     if(input_pattern[i] == input){

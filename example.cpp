@@ -1,7 +1,7 @@
 /*
  * Automatically Generated CodeExpert Solution
  * Script by Philipp Schilk, 2020
- * https://github.com/TheSchilk/ETHCodeExpert_Solver
+ * https://github.com/TheSchilk/CodeExpert_Solver
  *
  * Are you really going to submit this?
  * I wrote this as a fun programming challenge.
@@ -10,12 +10,11 @@
  */
 
 #include <iostream>
-#include <string.h>
-using namespace std;
+#include <algorithm>
 
 int case_count = 10;
 
-string input_pattern[] = {
+std::string input_pattern[] = {
   "0 0 r  2 1 r  0 1 r  2 0 r  0 0 d  2 2 u  1 0 r  1 1 u  1 1 r  0 2 d  1 1 d  1 0 d",
   "0 0 r  0 1 r  0 2 d  1 2 d  2 2 l  2 1 l  2 0 u  1 0 u  1 1 l  1 1 u  1 1 r  1 1 d",
   "0 0 r  0 1 r  0 2 d  1 2 d  2 2 l  2 1 l  2 0 u  1 0 u  1 1 l  1 1 r  1 1 u  1 1 d",
@@ -28,7 +27,7 @@ string input_pattern[] = {
   "0 0 d  0 0 r  1 0 r  0 1 d  0 1 r  0 2 d  1 0 d  1 1 r  1 1 d  2 0 r  1 2 d  2 1 r  2 0 d"
 };
 
-string output[] = {
+std::string output[] = {
   "Step #13\n  0 1 2\n0 .—.—.\n  |B|A|\n1 .—.—.\n  |A|A|\n2 .—.—.\nA won!",
   "Step #13\n  0 1 2\n0 .—.—.\n  |B|B|\n1 .—.—.\n  |B|B|\n2 .—.—.\nB won!",
   "Step #13\n  0 1 2\n0 .—.—.\n  |A|A|\n1 .—.—.\n  |A|A|\n2 .—.—.\nA won!",
@@ -43,9 +42,20 @@ string output[] = {
 
 int main(){
   //Get input
-  string input;
-  getline(cin, input);
+  std::string input = "";
+  std::cin >> std::noskipws;
+
+  char inchar;
+  while(std::cin >> inchar){
+    input += inchar;
+  }
   
+	//We always end up with a trailing newline, get rid of that.
+  input.pop_back();
+  
+  //Replace all newlines within string with spaces
+  replace(input.begin(), input.end(), '\n', ' ');
+	
   //Lookup and output
   for(int i = 0; i < case_count; i++){
     if(input_pattern[i] == input){

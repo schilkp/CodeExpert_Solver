@@ -60,7 +60,3 @@ where grader.txt is whatever you called the text file.
 
 ### 4: *Profit!*
 A file called CheatyCode.cpp will be generated.
-
-# Known Issues:
-Currently does not work if the test input provided by the auto-grader is longer 
-than one line.
