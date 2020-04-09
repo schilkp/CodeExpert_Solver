@@ -33,7 +33,7 @@ int main(){
     input += inchar;
   }
   
-	//We always end up with a trailing newline, get rid of that.
+  //We always end up with a trailing newline, get rid of that.
   input.pop_back();
   
   //Replace all newlines within string with spaces
